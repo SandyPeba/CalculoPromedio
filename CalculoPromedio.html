@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+      var cantidad = parseInt(prompt("¿Cuantos numeros desea calcular?"));
+      var suma = 0;
+      var numeros = [];
+
+      for(var i=0; i<cantidad; i++){
+        var numero = parseFloat(prompt("Ingresa el numero " + (i+1)));
+        numeros.push(numero);
+        suma += numero;
+      }
+
+      var promedio = suma/cantidad;
+      document.getElementById('resultado').innerHTML = 'La cantidad de numeros es: ' + cantidad + 
+                                                        '<br>Los numeros ingresados son: ' + numeros.join(', ') +
+                                                        '<br>El promedio es: ' + promedio.toFixed(2);
+    </script>
+</body>
+</html>
+
